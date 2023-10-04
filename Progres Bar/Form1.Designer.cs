@@ -33,21 +33,22 @@
             button1 = new Button();
             button2 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            button3 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(39, 70);
-            progressBar1.Maximum = 300;
+            progressBar1.Location = new Point(12, 70);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(300, 30);
+            progressBar1.Size = new Size(462, 30);
             progressBar1.Step = 1;
             progressBar1.TabIndex = 0;
             progressBar1.Click += progressBar1_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(39, 106);
+            button1.Location = new Point(12, 106);
             button1.Name = "button1";
             button1.Size = new Size(150, 50);
             button1.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(189, 106);
+            button2.Location = new Point(168, 106);
             button2.Name = "button2";
             button2.Size = new Size(150, 50);
             button2.TabIndex = 2;
@@ -67,20 +68,43 @@
             // 
             // timer1
             // 
-            timer1.Interval = 10;
+            timer1.Interval = 20;
             timer1.Tick += timer1_Tick;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(324, 106);
+            button3.Name = "button3";
+            button3.Size = new Size(150, 50);
+            button3.TabIndex = 3;
+            button3.Text = "Pause";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(246, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 4;
+            label1.Click += label1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(422, 227);
+            ClientSize = new Size(487, 171);
+            Controls.Add(label1);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(progressBar1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -89,5 +113,7 @@
         private Button button1;
         private Button button2;
         private System.Windows.Forms.Timer timer1;
+        private Button button3;
+        private Label label1;
     }
 }
